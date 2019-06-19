@@ -15,7 +15,11 @@ namespace BeautyForestAgent
         {
             InitializeComponent();
         }
-       
+        private void VisibleChange(bool visible)
+        {
+            this.Visible = visible;
+            this.ntiTray.Visible = !visible;
+        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -31,7 +35,40 @@ namespace BeautyForestAgent
 
         private void 종ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.ntiTray.Visible = false;
+            Application.ExitThread();
 
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+            VisibleChange(false);
+        }
+
+        private void Form1_DoubleClick(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void 폼보이기ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VisibleChange(true);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            VisibleChange(false);
+        }
+
+        private void NtiTray_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void NtiTray_DoubleClick(object sender, EventArgs e)
+        {
+            VisibleChange(false);
         }
     }
 }
