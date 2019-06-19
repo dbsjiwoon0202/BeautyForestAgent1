@@ -15,5 +15,23 @@ namespace BeautyForestAgent
         {
             InitializeComponent();
         }
+       
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        
+
+
+        private void ContextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void 종ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
